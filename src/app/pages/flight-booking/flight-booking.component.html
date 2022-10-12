@@ -1,0 +1,167 @@
+<div class="loader-container" *ngIf="displayModal">
+  <div
+    class="spinner-border text-light"
+    style="width: 3rem; height: 3rem"
+    role="status"
+  ></div>
+  <h3 style="margin-top: 10px; color: white">Loading</h3>
+</div>
+
+<div id="booking" class="section">
+  <div class="section-center">
+    <div class="container">
+      <div class="row">
+        <div class="booking-form">
+          <form (submit)="handleFormSubmit($event)" ngNativeValidate>
+            <!-- <div class="form-group">
+              <div class="form-group">
+                <span class="form-label">Trip Type</span>
+                <select
+                  class="form-control"
+                  [(ngModel)]="tripType"
+                  name="adult-count"
+                  required
+                >
+                  <option>Round Trip</option>
+                  <option>One Way Trip</option>
+                </select>
+                <span class="select-arrow"></span>
+              </div>
+            </div> -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <span class="form-label">Flying from</span>
+                  <!-- <input class="form-control" type="text" placeholder="City or airport"> -->
+                  <!--<div id="departsfrom-div" name="departsfrom-div" placeholder="Origin" class="col-xs-12 col-sm-6 col-md-3 widget-div-input scombobox padd-btm-1per marg-0 departsfrom-div"></div>
+										<input class="scombobox-display valid" placeholder="Origin" type="text" spellcheck="false" name="flightSearchFrom" aria-label="Search origin">-->
+                  <select
+                    id="from"
+                    name="from"
+                    class="form-control departsfrom-select"
+                    required
+                  >
+                    <option value="Katowice">Katowice</option>
+                    <option value="Warszawa">Warszawa</option>
+                    <option value="Kraków">Kraków</option>
+                    <option value="Berlin">Berlin</option>
+                    <option value="Paryż">Paryż</option>
+                    <option value="Londyn">Londyn</option>
+                    <option value="New York">New York</option>
+                    <option value="Los Angeles">Los Angeles</option>
+                    <option value="Delhi">Delhi</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <span class="form-label">Flying to</span>
+                  <select
+                    id="from"
+                    name="from"
+                    class="form-control departsfrom-select"
+                    required
+                  >
+                  <option value="Katowice">Katowice</option>
+                  <option value="Warszawa">Warszawa</option>
+                  <option value="Kraków">Kraków</option>
+                  <option value="Berlin">Berlin</option>
+                  <option value="Paryż">Paryż</option>
+                  <option value="Londyn">Londyn</option>
+                  <option value="New York">New York</option>
+                  <option value="Los Angeles">Los Angeles</option>
+                  <option value="Delhi">Delhi</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <div class="form-group">
+                  <span class="form-label">Departing</span>
+                  <input
+                    class="form-control"
+                    type="date"
+                    name="departureDate"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-group">
+                  <span class="form-label">Returning</span>
+                  <input
+                    class="form-control"
+                    type="date"
+                    required
+                    name="returnDate"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <span class="form-label">Adults (18+)</span>
+                  <select
+                    class="form-control"
+                    name="adult-count"
+                    required
+                  >
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                  </select>
+                  <span class="select-arrow"></span>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group">
+                  <span class="form-label">Children (0-17)</span>
+                  <select
+                    class="form-control"
+                    name="childrenCount"
+                    required
+                  >
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                  </select>
+                  <span class="select-arrow"></span>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <div class="form-group">
+                  <span class="form-label">Travel class</span>
+                  <select
+                    class="form-control"
+                    name="flightClass"
+                    required
+                  >
+                    <option>Any</option>
+                    <option>Economy Class</option>
+                    <option>Business Class</option>
+                    <option>First Class</option>
+                  </select>
+                  <span class="select-arrow"></span>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <div class="form-btn">
+                  <button class="submit-btn" type="submit">Show flights</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
